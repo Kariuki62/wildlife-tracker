@@ -21,7 +21,7 @@ public class AnimalAbstract {
         return health;
     }
 
-    //Method to get Type
+    //Method to get Type0
     public String getType() {
         return type;
     }
