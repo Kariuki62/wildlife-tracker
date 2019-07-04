@@ -1,3 +1,6 @@
+{{#partial "styles"}}
+        <link rel='stylesheet' href='/css/app.css'>
+{{/partial}}
 {{#partial "content"}}
     <h1 class="header">WILDLIFE TRACKER</h1>
     <br>
@@ -36,7 +39,7 @@
             <option value="safe">Safe</option>
             <option value="endangered">Endangered</option>
         </select>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success" id="button">Submit</button>
     </form>
 {{/partial}}
 {{> layout.hbs}}

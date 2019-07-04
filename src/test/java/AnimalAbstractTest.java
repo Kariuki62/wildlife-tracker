@@ -57,9 +57,9 @@ public class AnimalAbstractTest {
     //Test to check if all instances of regular animals are made
     @Test
     public void animal_AllInstancesOfAnimalAreReturned_True(){
-        Animal myAnimal1 = new Animal("panther", "young","healthy","safe");
+        Animal myAnimal1 = new Animal("coyote", "young","healthy","safe");
         myAnimal1.save();
-        Animal myAnimal2 = new Animal("puma","mature","healthy","safe");
+        Animal myAnimal2 = new Animal("jaguar","mature","healthy","safe");
         myAnimal2.save();
         assertTrue(Animal.all().get(0).equals(myAnimal1));
         assertTrue(Animal.all().get(1).equals(myAnimal2));
@@ -67,7 +67,7 @@ public class AnimalAbstractTest {
     //Animal is assigined an Id
     @Test
     public void animal_AnimalIsAssingnedAnID_getid(){
-        Animal myAnimal = new Animal("puma","young","healthy","safe");
+        Animal myAnimal = new Animal("jaguar","young","healthy","safe");
         myAnimal.save();
         Animal testAnimalia = Animal.all().get(0);
         assertEquals(myAnimal.getId(), testAnimalia.getId());
@@ -75,9 +75,9 @@ public class AnimalAbstractTest {
 
     //Test to find Animal with the Same Id
     public void find_WillReturnAnimalWithTheSame_SecondAnimal(){
-        Animal firstAnimal = new Animal("panther","mature","healthy","safe");
+        Animal firstAnimal = new Animal("coyote","mature","healthy","safe");
         firstAnimal.save();
-        Animal secondAnimal = new Animal("puma","young","healthy","safe");
+        Animal secondAnimal = new Animal("jaguar","young","healthy","safe");
         secondAnimal.save();
         assertEquals(Animal.find(secondAnimal.getId()), secondAnimal);
     }
